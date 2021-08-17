@@ -1,10 +1,15 @@
 package com.aksh.springbootdynamoms.dto;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+
 import lombok.Data;
 
 @Data
+@DynamoDBTable(tableName = "trade-info")
 public class Trade {
-	private int id;
+	@DynamoDBHashKey(attributeName = "tradeId")
+	private String tradeId;
 	private String symbol;
 	private double quantity;
 	private double price;
