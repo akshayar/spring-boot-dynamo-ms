@@ -20,7 +20,7 @@ public class TradeController {
 	private TradeDao tradeDao;
 	@RequestMapping("trade/ping")
 	public String ping() {
-		return "OK-New" + new Date();
+		return "OK" + new Date();
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, path = "trade")
