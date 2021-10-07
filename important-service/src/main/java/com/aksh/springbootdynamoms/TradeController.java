@@ -16,16 +16,17 @@ import lombok.extern.java.Log;
 @RestController
 @Log
 public class TradeController {
+	private static final String MESSAGE="Important Service";
 	@Autowired
 	private TradeDao tradeDao;
 	@RequestMapping("trade/ping")
 	public String ping() {
-		return "OK" + new Date();
+		return MESSAGE+" OK" + new Date();
 	}
 
 	@RequestMapping(method = RequestMethod.PUT, path = "trade")
 	private Trade create(@RequestBody Trade trade) {
-		log.info("Saving "+trade);
+		log.info(MESSAGE+": Saving "+trade);
 		tradeDao.save(trade);
 		return trade;
 	}
@@ -33,11 +34,13 @@ public class TradeController {
 	@RequestMapping(method = RequestMethod.POST, path = "trade")
 	private Trade update(Trade trade) {
 		tradeDao.save(trade);
+		log.info(MESSAGE+": Saving "+trade);
 		return trade;
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, path = "trade/{id}")
 	private Trade get(@PathVariable String id) {
+		log.info(MESSAGE+": Getting "+id);
 		return tradeDao.getById(id);
 	}
 

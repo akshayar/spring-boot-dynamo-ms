@@ -1,0 +1,33 @@
+{
+  "executionRoleArn": "arn:aws:iam::799223504601:role/ecs-ec2-cluster-ECSTaskExecutionRole-1A5AFCYJ6VLL3",
+  "containerDefinitions": [
+    {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/less-important-service",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "portMappings": [],
+      "cpu": 0,
+      "environment": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "image": "799223504601.dkr.ecr.us-east-1.amazonaws.com/less-important-service:latest",
+      "essential": true,
+      "name": "less-important-service"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "1024",
+  "taskRoleArn": "arn:aws:iam::799223504601:role/kcl-consumer-ecs",
+  "family": "less-important-service",
+  "requiresCompatibilities": [
+    "EC2"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "512",
+  "volumes": []
+}
