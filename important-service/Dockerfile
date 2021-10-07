@@ -2,7 +2,7 @@ FROM openjdk:11
 WORKDIR /app
 
 
-COPY target/spring-boot-dynamo-ms-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY target/important-service-0.0.1-SNAPSHOT.jar /app/app.jar
 COPY src/main/resources /app/config
 USER root
 ENV STREAM_NAME=aksh-first
