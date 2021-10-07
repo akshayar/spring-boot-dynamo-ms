@@ -16,11 +16,12 @@ import lombok.extern.java.Log;
 @RestController
 @Log
 public class TradeController {
-	private static final String MESSAGE="Important Service";
+	private static final String MESSAGE="Less Important Service";
 	@Autowired
 	private TradeDao tradeDao;
 	@RequestMapping("trade/ping")
 	public String ping() {
+		log.info(MESSAGE+" OK" + new Date());
 		return MESSAGE+" OK" + new Date();
 	}
 

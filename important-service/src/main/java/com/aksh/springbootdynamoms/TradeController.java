@@ -21,6 +21,7 @@ public class TradeController {
 	private TradeDao tradeDao;
 	@RequestMapping("trade/ping")
 	public String ping() {
+		log.info(MESSAGE+" OK" + new Date());
 		return MESSAGE+" OK" + new Date();
 	}
 
