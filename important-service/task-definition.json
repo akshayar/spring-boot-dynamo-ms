@@ -22,7 +22,7 @@
   ],
   "placementConstraints": [],
   "memory": "1024",
-  "taskRoleArn": "arn:aws:iam::799223504601:role/kcl-consumer-ecs",
+  "taskRoleArn": "arn:aws:iam::${ACCOUNT_ID}:role/kcl-consumer-ecs",
   "family": "less-important-service",
   "requiresCompatibilities": [
     "EC2"
