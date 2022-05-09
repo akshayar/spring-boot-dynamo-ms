@@ -1,5 +1,5 @@
 {
-  "executionRoleArn": "arn:aws:iam::799223504601:role/ecs-ec2-cluster-ECSTaskExecutionRole-1A5AFCYJ6VLL3",
+  "executionRoleArn": "arn:aws:iam::${ACCOUNT_ID}:role/ecs-ec2-cluster-ECSTaskExecutionRole-1A5AFCYJ6VLL3",
   "containerDefinitions": [
     {
       "logConfiguration": {
@@ -15,7 +15,7 @@
       "environment": [],
       "mountPoints": [],
       "volumesFrom": [],
-      "image": "799223504601.dkr.ecr.us-east-1.amazonaws.com/less-important-service:latest",
+      "image": "${ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/less-important-service:latest",
       "essential": true,
       "name": "less-important-service"
     }
