@@ -15,7 +15,7 @@
       "environment": [],
       "mountPoints": [],
       "volumesFrom": [],
-      "image": "799223504601.dkr.ecr.us-east-1.amazonaws.com/less-important-service:latest",
+      "image": "${ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/less-important-service:latest",
       "essential": true,
       "name": "less-important-service"
     }
